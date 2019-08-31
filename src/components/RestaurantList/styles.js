@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const RestaurantListContainer = styled.FlatList`
   padding: 16px;
 `;
 

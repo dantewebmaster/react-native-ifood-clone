@@ -1,8 +1,10 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.ScrollView.attrs({
+export const TopRestaurantSliderList = styled.FlatList.attrs({
   contentContainerStyle: { paddingLeft: 16, paddingRight: 8 },
   showsHorizontalScrollIndicator: false,
+  bounces: false,
+  horizontal: true,
 })`
   background-color: #fff;
   padding-bottom: 24px;

@@ -1,25 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Container, TopRestaurantSliderItem, Logo, TopRestaurantSliderTitle,
+  TopRestaurantSliderList, TopRestaurantSliderItem, Logo, TopRestaurantSliderTitle,
 } from './styles';
 
-import { Typography } from '~/pages/Main/styles';
+import Typography from '~/components/Common/Typography';
 
 export default function TopRestaurantSlider({
   data,
 }) {
   return (
-    <Container horizontal>
-      {data.map((item) => (
+    <TopRestaurantSliderList
+      data={data}
+      keyExtractor={(item) => String(item.id)}
+      renderItem={({ item }) => (
         <TopRestaurantSliderItem key={item.id}>
           <Logo source={{ uri: item.logo }} />
           <TopRestaurantSliderTitle>
             <Typography size="16" color="#444" align="center">{item.title}</Typography>
           </TopRestaurantSliderTitle>
         </TopRestaurantSliderItem>
-      ))}
-    </Container>
+      )}
+    />
   );
 }
 

@@ -1,11 +1,13 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.ScrollView.attrs({
+export const Container = styled.View`
+  padding-bottom: 24px;
+`;
+
+export const RecentRestaurantSliderList = styled.FlatList.attrs({
   contentContainerStyle: { paddingLeft: 16, paddingRight: 8 },
-  showsHorizontalScrollIndicator: false,
 })`
   background-color: #fff;
-  padding-bottom: 24px;
 `;
 
 export const RecentRestaurantSliderItem = styled.View`

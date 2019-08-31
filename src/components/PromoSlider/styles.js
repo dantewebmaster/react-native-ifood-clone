@@ -1,8 +1,10 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.ScrollView.attrs({
+export const PromoSliderList = styled.FlatList.attrs({
   contentContainerStyle: { paddingLeft: 16, paddingRight: 8 },
   showsHorizontalScrollIndicator: false,
+  bounces: false,
+  horizontal: true,
 })`
   background-color: #fff;
   padding-bottom: 24px;
@@ -31,4 +33,11 @@ export const PromoSliderFooter = styled.View`
   padding: 8px 12px 12px;
   flex-direction: row;
   justify-content: space-between;
+`;
+
+export const SeeMoreButton = styled.TouchableOpacity`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
 `;

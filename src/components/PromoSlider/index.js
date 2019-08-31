@@ -1,17 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Container, PromoSliderItem, PromoSliderImage, PromoSliderFooter, PromoSliderTitle,
+  PromoSliderList,
+  PromoSliderItem,
+  PromoSliderImage,
+  PromoSliderFooter,
+  PromoSliderTitle,
+  SeeMoreButton,
 } from './styles';
-import { Typography } from '~/pages/Main/styles';
+import Typography from '~/components/Common/Typography';
 
 export default function PromoSlider({
   data,
 }) {
   return (
-    <Container horizontal>
-      {data.map((item) => (
-        <PromoSliderItem key={item.id}>
+    <PromoSliderList
+      data={data}
+      keyExtractor={(item) => String(item.id)}
+      ListFooterComponent={(
+        <SeeMoreButton>
+          <Typography color="#e81010" size="16">Outros pratos</Typography>
+        </SeeMoreButton>
+      )}
+      renderItem={({ item }) => (
+        <PromoSliderItem>
           <PromoSliderImage source={{ uri: item.imageUrl }} />
           <PromoSliderTitle>
             <Typography size="18" color="#333">{item.title}</Typography>
@@ -21,8 +33,8 @@ export default function PromoSlider({
             <Typography size="14" color="gray" strike>R$ {item.originalPrice}</Typography>
           </PromoSliderFooter>
         </PromoSliderItem>
-      ))}
-    </Container>
+      )}
+    />
   );
 }
 

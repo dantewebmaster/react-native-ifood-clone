@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Container,
+  RestaurantListContainer,
   RestaurantListItem,
   LogoContainer,
   Logo,
@@ -10,14 +10,16 @@ import {
   DeliveryDetails,
   Separator,
 } from './styles';
-import { Typography } from '~/pages/Main/styles';
+import Typography from '~/components/Common/Typography';
 
 export default function RestaurantList({
   data,
 }) {
   return (
-    <Container>
-      {data.map((item) => (
+    <RestaurantListContainer
+      data={data}
+      keyExtractor={(item) => String(item.id)}
+      renderItem={({ item }) => (
         <RestaurantListItem key={item.id}>
           <LogoContainer>
             <Logo source={{ uri: item.logo }} />
@@ -36,8 +38,8 @@ export default function RestaurantList({
             </DeliveryDetails>
           </Infos>
         </RestaurantListItem>
-      ))}
-    </Container>
+      )}
+    />
   );
 }
 
