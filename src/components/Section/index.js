@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import {
   Container, SectionHeader, Left, Icon,
 } from './styles';
-import { Button, Typography } from '~/pages/Main/styles';
+import { Button } from '~/pages/Main/styles';
+import Typography from '~/components/Common/Typography';
 
 export default function Section({
   title,

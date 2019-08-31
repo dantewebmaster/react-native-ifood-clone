@@ -17,6 +17,7 @@ export const SearchIcon = styled.Image`
 
 export const SearchInput = styled.TextInput`
   height: 40px;
-  padding: 16px;
   font-size: 18px;
+  padding-left: 16px;
+  width: 80%;
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  StyleSheet, Platform, StatusBar, View,
+  StyleSheet, Platform, StatusBar,
 } from 'react-native';
 
 import '~/config/ReactotronConfig';
@@ -15,11 +15,15 @@ const styles = StyleSheet.create({
   },
 });
 
-const App = () => (
-  <>
-    <StatusBar style={styles.statusBar} backgroundColor="#ffffff" barStyle="dark-content" />
-    <Routes />
-  </>
-);
-
-export default App;
+export default function App() {
+  return (
+    <>
+      <StatusBar
+        style={styles.statusBar}
+        backgroundColor="#ffffff"
+        barStyle="dark-content"
+      />
+      <Routes />
+    </>
+  );
+}

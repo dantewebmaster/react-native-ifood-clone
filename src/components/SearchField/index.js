@@ -12,6 +12,7 @@ export default function SearchField({
       <SearchInput
         placeholder={placeholderText}
         placeholderTextColor="#666"
+        autoCorrect={false}
       />
     </Container>
   );

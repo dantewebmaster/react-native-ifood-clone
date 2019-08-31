@@ -17,8 +17,6 @@ export const AddressOptions = styled.View`
   flex-direction: column;
 `;
 
-export const QRCodeButton = styled.TouchableOpacity``;
-
 export const QRCodeIcon = styled.Image`
   width: 30px;
   height: 30px;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
   Container, CouponImage, Infos, More,
 } from './styles';
-import { Typography } from '~/pages/Main/styles';
+import Typography from '~/components/Common/Typography';
 
 import Coupon from '~/assets/discount.png';
 import RightChevron from '~/assets/right-chevron.png';
