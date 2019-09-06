@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const RestaurantListContainer = styled.FlatList`
-  padding: 16px;
+  padding: 0 16px;
 `;
 
 export const RestaurantListItem = styled.View`
