@@ -32,7 +32,7 @@ export const PromoSliderTitle = styled.View`
 export const PromoSliderFooter = styled.View`
   padding: 8px 12px 12px;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
 `;
 
 export const SeeMoreButton = styled.TouchableOpacity`

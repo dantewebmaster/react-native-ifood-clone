@@ -9,6 +9,7 @@ import {
   SeeMoreButton,
 } from './styles';
 import Typography from '~/components/Common/Typography';
+import { Separator } from '../RestaurantList/styles';
 
 export default function PromoSlider({
   data,
@@ -30,6 +31,7 @@ export default function PromoSlider({
           </PromoSliderTitle>
           <PromoSliderFooter>
             <Typography size="18" color="green">R$ {item.promoPrice}</Typography>
+            <Separator />
             <Typography size="14" color="gray" strike>R$ {item.originalPrice}</Typography>
           </PromoSliderFooter>
         </PromoSliderItem>
