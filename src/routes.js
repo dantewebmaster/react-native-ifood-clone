@@ -12,7 +12,7 @@ const HomeTab = createSwitchNavigator(
   },
 );
 
-const SearchTab = createSwitchNavigator(
+const DetailsTab = createSwitchNavigator(
   {
     Home: Main,
     Details: Main,
@@ -22,19 +22,14 @@ const SearchTab = createSwitchNavigator(
 const Routes = createBottomTabNavigator(
   {
     Home: HomeTab,
-    Search: SearchTab,
+    Details: DetailsTab,
   },
   {
     defaultNavigationOptions: () => ({
       tabBarComponent: () => (
         <CustomFooterTabBar />
-      )
-      ,
+      ),
     }),
-    tabBarOptions: {
-      activeTintColor: '#FF6F00',
-      inactiveTintColor: '#263238',
-    },
   },
 );
 
