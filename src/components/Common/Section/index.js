@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {
   Container, SectionHeader, Left, Icon,
 } from './styles';
-import { Button } from '~/pages/Main/styles';
+import Button from '~/components/Common/Button';
 import Typography from '~/components/Common/Typography';
 
 export default function Section({
@@ -30,9 +30,7 @@ export default function Section({
           </Left>
           {buttonAction
             && (
-            <Button>
-              <Typography size="16" color="#e81010">Ver mais</Typography>
-            </Button>
+              <Button text="Ver mais" />
             )}
         </SectionHeader>
       )}

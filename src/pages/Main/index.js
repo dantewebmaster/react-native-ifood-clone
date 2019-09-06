@@ -1,18 +1,17 @@
 import React from 'react';
+import { View, SafeAreaView, TouchableOpacity } from 'react-native';
 
+// Main page Styled components
 import {
-  View, SafeAreaView, TouchableOpacity,
-} from 'react-native';
-
-import {
-  Container, StickyHeader, ShippingAddress, Button, QRCodeIcon,
+  Container, StickyHeader, ShippingAddress, QRCodeIcon,
 } from './styles';
 
+// Custom components
+import Button from '~/components/Common/Button';
 import Typography from '~/components/Common/Typography';
-
 import BannerSlider from '../../components/BannerSlider';
 import PromoSlider from '~/components/PromoSlider';
-import Section from '~/components/Section';
+import Section from '~/components/Common/Section';
 import SingleBanner from '~/components/SingleBanner';
 import CategorySlider from '~/components/CategorySlider';
 import TopRestaurantSlider from '~/components/TopRestaurantSlider';
@@ -21,6 +20,7 @@ import RestaurantList from '~/components/RestaurantList';
 import Discount from '~/components/Discount';
 import SearchField from '~/components/SearchField';
 
+// Images
 import QRCodeImage from '../../assets/qr-code.png';
 
 // Mock data
@@ -30,7 +30,7 @@ export default function Main() {
   return (
     <SafeAreaView>
       <Container
-        stickyHeaderIndices={[1]}
+        stickyHeaderIndices={[1]} // component with index [1] is sticky
         showsVerticalScrollIndicator={false}
         bounces={false}
         refreshing={false}
@@ -49,9 +49,7 @@ export default function Main() {
           <SearchField
             placeholderText="Prato ou restaurante"
           />
-          <Button>
-            <Typography size="16" color="#e81010">Filtros</Typography>
-          </Button>
+          <Button text="Filtros" textColor="#e81010" />
         </StickyHeader>
 
         <Section
@@ -84,9 +82,10 @@ export default function Main() {
         </Section>
 
         <Section>
-          <SingleBanner bannerUrl="https://dicasdalarica.files.wordpress.com/2016/03/00-banner-club-house-mc-donalds.jpg" />
+          <SingleBanner
+            bannerUrl="https://dicasdalarica.files.wordpress.com/2016/03/00-banner-club-house-mc-donalds.jpg"
+          />
         </Section>
-
 
         <Section
           title="Famosos no iFood"

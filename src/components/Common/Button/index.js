@@ -1,0 +1,24 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import Typography from '~/components/Common/Typography';
+import { StyledButton } from './styles';
+
+export default function Button({
+  text,
+  textColor,
+}) {
+  return (
+    <StyledButton>
+      <Typography size="16" color={textColor}>{text}</Typography>
+    </StyledButton>
+  );
+}
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  textColor: PropTypes.string,
+};
+
+Button.defaultProps = {
+  textColor: '#e81010',
+};
