@@ -1,32 +1,51 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
-  Container, TabItem, TabIcon, TabTitle,
+  Container, TabItem, TabIcon,
 } from './styles';
+import Typography from '../Common/Typography';
 
-import Home from '~/assets/home.png';
-import SearchBlack from '~/assets/search-black.png';
-import Orders from '~/assets/order.png';
-import Profile from '~/assets/profile.png';
+export default function CustomFooterTabBar({
+  renderIcon,
+  getLabelText,
+  activeTintColor,
+  inactiveTintColor,
+  onTabPress,
+  onTabLongPress,
+  getAccessibilityLabel,
+  navigation,
+}) {
+  const { routes, index: activeRouteIndex } = navigation.state;
 
-export default function CustomFooterTabBar() {
   return (
     <Container>
-      <TabItem>
-        <TabIcon source={Home} />
-        <TabTitle>Início</TabTitle>
-      </TabItem>
-      <TabItem>
-        <TabIcon source={SearchBlack} />
-        <TabTitle>Busca</TabTitle>
-      </TabItem>
-      <TabItem>
-        <TabIcon source={Orders} />
-        <TabTitle>Pedidos</TabTitle>
-      </TabItem>
-      <TabItem>
-        <TabIcon source={Profile} />
-        <TabTitle>Perfil</TabTitle>
-      </TabItem>
+      {routes.map((route, routeIndex) => {
+        const isRouteActive = routeIndex === activeRouteIndex;
+        const tintColor = isRouteActive ? activeTintColor : inactiveTintColor;
+
+        return (
+          <TabItem
+            key={routeIndex}
+            onPress={() => {
+              onTabPress({ route });
+            }}
+            onLongPress={() => {
+              onTabLongPress({ route });
+            }}
+            accessibilityLabel={getAccessibilityLabel({ route })}
+          >
+            <TabIcon source={renderIcon({ route })} />
+            <Typography size="14" color={tintColor}>{getLabelText({ route })}</Typography>
+          </TabItem>
+        );
+      })}
     </Container>
   );
 }
+
+CustomFooterTabBar.propTypes = {
+  navigation: PropTypes.shape({
+    goBack: PropTypes.func,
+    navigate: PropTypes.func,
+  }).isRequired,
+};

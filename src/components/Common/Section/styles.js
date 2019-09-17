@@ -17,6 +17,7 @@ export const Left = styled.View`
   align-items: center;
   flex-direction: row;
 `;
+
 export const Icon = styled.Image`
   width: 32px;
   height: 32px;

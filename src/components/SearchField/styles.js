@@ -7,12 +7,7 @@ export const Container = styled.View`
   align-items: center;
   height: 55px;
   border-radius: 4px;
-`;
-
-export const SearchIcon = styled.Image`
-  width: 32px;
-  height: 32px;
-  margin-left: 16px;
+  padding: 0 16px;
 `;
 
 export const SearchInput = styled.TextInput`

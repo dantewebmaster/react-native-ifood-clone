@@ -78,6 +78,41 @@
       "id": 55,
       "title": "Árabe",
       "imageUrl": "https://source.unsplash.com/100x60/?chinese,food"
+    },
+    {
+      "id": 66,
+      "title": "Mexicana",
+      "imageUrl": "https://source.unsplash.com/100x60/?pepper,food"
+    },
+    {
+      "id": 77,
+      "title": "Promoções",
+      "imageUrl": "https://source.unsplash.com/100x60/?food"
+    },
+    {
+      "id": 88,
+      "title": "Bolos",
+      "imageUrl": "https://source.unsplash.com/100x60/?cake"
+    },
+    {
+      "id": 8080,
+      "title": "Sorvetes",
+      "imageUrl": "https://source.unsplash.com/100x60/?food,icecream"
+    },
+    {
+      "id": 99,
+      "title": "Espetinhos",
+      "imageUrl": "https://source.unsplash.com/100x60/?food"
+    },
+    {
+      "id": 9090,
+      "title": "Carnes",
+      "imageUrl": "https://source.unsplash.com/100x60/?food,meat"
+    },
+    {
+      "id": 1120,
+      "title": "Italiana",
+      "imageUrl": "https://source.unsplash.com/100x60/?food"
     }
   ],
   "topRestaurants": [
@@ -192,6 +227,28 @@
         "price": "R$ 5,00",
         "byIfood": true
       }
+    }
+  ],
+  "recentSearches": [
+    {
+      "id": 3432322,
+      "title": "Asia express"
+    },
+    {
+      "id": 4356545,
+      "title": "Quero Cafééééééé"
+    },
+    {
+      "id": 4334555,
+      "title": "Hamburgão monstro"
+    },
+    {
+      "id": 2445444,
+      "title": "Comida chinesa"
+    },
+    {
+      "id": 2335465,
+      "title": "Pizza Hut"
     }
   ]
 }

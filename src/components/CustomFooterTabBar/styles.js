@@ -10,7 +10,7 @@ export const Container = styled.View`
   border-top-width: 1px;
 `;
 
-export const TabItem = styled.View`
+export const TabItem = styled.TouchableOpacity`
   width: 80px;
   height: 40px;
   align-items: center;
@@ -20,8 +20,4 @@ export const TabIcon = styled.Image`
   width: 24px;
   height: 24px;
   margin-bottom: 8px;
-`;
-
-export const TabTitle = styled.Text`
-  font-size: 14px;
 `;

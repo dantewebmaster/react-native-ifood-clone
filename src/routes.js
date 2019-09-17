@@ -1,36 +1,56 @@
-import React from 'react';
-import { createAppContainer, createSwitchNavigator, createBottomTabNavigator } from 'react-navigation';
-
-import Main from '~/pages/Main';
+import { createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+// Screens
+import MainScreen from '~/pages/Main';
+import SearchScreen from '~/pages/Search';
 
 import CustomFooterTabBar from '~/components/CustomFooterTabBar';
+// Tabbar icon sources
+import HomeIcon from '~/assets/home.png';
+import SearchIcon from '~/assets/search-black.png';
+import OrdersIcon from '~/assets/order.png';
+import ProfileIcon from '~/assets/profile.png';
 
-const HomeTab = createSwitchNavigator(
+const TabRoutes = createBottomTabNavigator(
   {
-    Home: Main,
-    Details: Main,
-  },
-);
-
-const DetailsTab = createSwitchNavigator(
-  {
-    Home: Main,
-    Details: Main,
-  },
-);
-
-const Routes = createBottomTabNavigator(
-  {
-    Home: HomeTab,
-    Details: DetailsTab,
+    Home: {
+      screen: MainScreen,
+      navigationOptions: {
+        tabBarIcon: () => HomeIcon,
+        tabBarLabel: 'Início',
+      },
+    },
+    Search: {
+      screen: SearchScreen,
+      navigationOptions: {
+        tabBarIcon: () => SearchIcon,
+        tabBarLabel: 'Buscar',
+      },
+    },
+    Orders: {
+      screen: SearchScreen,
+      navigationOptions: {
+        tabBarIcon: () => OrdersIcon,
+        tabBarLabel: 'Pedidos',
+      },
+    },
+    Profile: {
+      screen: SearchScreen,
+      navigationOptions: {
+        tabBarIcon: () => ProfileIcon,
+        tabBarLabel: 'Perfil',
+      },
+    },
   },
   {
     defaultNavigationOptions: () => ({
-      tabBarComponent: () => (
-        <CustomFooterTabBar />
-      ),
+      tabBarComponent: CustomFooterTabBar,
+      tabBarOptions: {
+        activeTintColor: '#000',
+        inactiveTintColor: '#666',
+      },
     }),
   },
 );
 
-export default createAppContainer(Routes);
+export default createAppContainer(TabRoutes);

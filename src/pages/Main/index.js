@@ -1,9 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { View, SafeAreaView, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/Feather';
 
 // Main page Styled components
 import {
-  Container, StickyHeader, ShippingAddress, QRCodeIcon,
+  Container, StickyHeader, ShippingAddress, QRCodeIcon, FakeSearchField,
+  FakePlaceholder,
 } from './styles';
 
 // Custom components
@@ -18,7 +21,7 @@ import TopRestaurantSlider from '~/components/TopRestaurantSlider';
 import RecentRestaurantSlider from '~/components/RecentRestaurantSlider';
 import RestaurantList from '~/components/RestaurantList';
 import Discount from '~/components/Discount';
-import SearchField from '~/components/SearchField';
+// import SearchField from '~/components/SearchField';
 
 // Images
 import QRCodeImage from '../../assets/qr-code.png';
@@ -26,7 +29,7 @@ import QRCodeImage from '../../assets/qr-code.png';
 // Mock data
 import data from '../../../data.json';
 
-export default function Main() {
+export default function Main({ navigation }) {
   return (
     <SafeAreaView>
       <Container
@@ -46,10 +49,22 @@ export default function Main() {
         </ShippingAddress>
 
         <StickyHeader>
-          <SearchField
-            placeholderText="Prato ou restaurante"
+          {/* Criar um fake input... */}
+          <FakeSearchField
+            onPress={() => navigation.navigate('Search')}
+          >
+            <Icon name="search" size={32} color="#e81010" />
+            <FakePlaceholder
+              size="18"
+              color="#999"
+            >
+              Prato ou restaurante
+            </FakePlaceholder>
+          </FakeSearchField>
+          <Button
+            text="Filtros"
+            textColor="#e81010"
           />
-          <Button text="Filtros" textColor="#e81010" />
         </StickyHeader>
 
         <Section
@@ -103,3 +118,10 @@ export default function Main() {
     </SafeAreaView>
   );
 }
+
+Main.propTypes = {
+  navigation: PropTypes.shape({
+    goBack: PropTypes.func,
+    navigate: PropTypes.func,
+  }).isRequired,
+};

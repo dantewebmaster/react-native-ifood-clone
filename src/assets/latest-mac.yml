@@ -1,0 +1,23 @@
+version: 2.17.1
+files:
+  - url: Reactotron-2.17.1-mac.zip
+    sha512: kbcObarJJQI1+KpM4mnnECCv6uvp+Rfm6Hu2RV+u+5/pzauaVkl3CAoBbyTeiYsD5nRJUsTxsXcOyacSV5AwjA==
+    size: 69893505
+    blockMapSize: 73852
+  - url: Reactotron-2.17.1.dmg
+    sha512: i1C2LrfCKFeyfXvVCpwivBgMO06J0ZoL9TX+xJYvFvvw2mMhcbXVPMQxcf8SjPy5a2pMlR1plLsLbq96N/iIDw==
+    size: 72952645
+path: Reactotron-2.17.1-mac.zip
+sha512: kbcObarJJQI1+KpM4mnnECCv6uvp+Rfm6Hu2RV+u+5/pzauaVkl3CAoBbyTeiYsD5nRJUsTxsXcOyacSV5AwjA==
+releaseNotes: |+
+  ## [2.17.1](https://github.com/infinitered/reactotron/compare/v2.17.0...v2.17.1) (2019-08-28)
+
+
+  ### Bug Fixes
+
+  * align expander icons with mui ([#1131](https://github.com/infinitered/reactotron/issues/1131)) ([02de687](https://github.com/infinitered/reactotron/commit/02de687))
+
+
+
+
+releaseDate: '2019-08-28T01:18:17.106Z'
