@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 // Screens
 import MainScreen from '~/pages/Main';
 import SearchScreen from '~/pages/Search';
-
+// Custom tabbar component
 import CustomFooterTabBar from '~/components/CustomFooterTabBar';
 // Tabbar icon sources
 import HomeIcon from '~/assets/home.png';

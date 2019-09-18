@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-
+// Components
 import SearchField from '~/components/SearchField';
 import Button from '~/components/Common/Button';
 import Section from '~/components/Common/Section';
 import Typography from '~/components/Common/Typography';
-
+// Styles
 import {
   ScrollableContainer,
   SearchContainer, RecentSearches, ListItem, CategoryItem, ImageOverlay, CategoriesList,
 } from './styles';
 import { Separator } from '~/components/RestaurantList/styles';
-
+// Data
 import { recentSearches, categories } from '../../../data.json';
 
 export default function Search({ navigation }) {

@@ -9,6 +9,8 @@ Repository with iFood clone (views) using React Native.
 * Download all images to assets folder (Issue: NSMutableURLRequest)
 * Create Loading on screen transitions
 * Animate screen transitions
+* Rodar e testar o projeto em aparelhos reais
+* Testar no emulador do Android
 
 ## Changelog
 * Home screen finished
